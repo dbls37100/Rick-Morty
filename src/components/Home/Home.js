@@ -106,7 +106,6 @@ const Home = () => {
 
     return (
         <div>
-            <button onClick={listReturn}>Revenir a la liste</button>
             <form className="form-Disposition" onSubmit={handleSubmitName}>
                 <TextField className="color-Textfield" id="outlined-basic" label="Outlined" variant="outlined" value={name} onChange={e => setName(e.target.value)} />
             </form>
@@ -114,6 +113,9 @@ const Home = () => {
                 <i onClick={handleSubmitAlive} className="fas fa-heartbeat"></i>
                 <i onClick={handleSubmitDead} className="fas fa-skull-crossbones"></i>
                 <i onClick={handleSubmitUnknown} className="fas fa-question-circle"></i>
+            </div>
+            <div className="display_Button-align">
+                <Button variant="contained" color="primary" onClick={listReturn}>Reinitialiser les filtres</Button>
             </div>
             <div>
                 {apiData.map((data, key) => (

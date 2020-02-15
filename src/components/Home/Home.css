@@ -7,6 +7,13 @@
     text-align: center;
 }
 
+.display_Button-align {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 .Footer-button_display {
     position: fixed;
     display: flex;
