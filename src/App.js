@@ -15,7 +15,7 @@ const App = (props) => {
     <Router>
     <div>
       <Switch>
-        <Route exact path="/personnages" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/personnage/:id" component={Episodes}/>
       </Switch>
     </div>
