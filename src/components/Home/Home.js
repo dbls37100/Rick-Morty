@@ -91,7 +91,7 @@ const Home = () => {
     
     const renderRedirect = () => {
         if (redirectPerso) {
-          return <Redirect to='/episodes/' />
+          return <Redirect to='/' />
         }
       }
 
