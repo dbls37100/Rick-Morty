@@ -4,7 +4,7 @@ import './Home.css';
 import useLocalStorage from 'react-use-localstorage';
 import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { TextField } from '@material-ui/core';
+import { TextField, Button } from '@material-ui/core';
 
 const Home = () => {
     // donnée générale
@@ -127,9 +127,9 @@ const Home = () => {
                 ))}
             </div>
             <div className="Footer-button_display">
-                <button onClick={previousPage}>Page precedente</button>
-                <button onClick={setRedirect}>Redirect</button>
-                <button onClick={nextPage}>Page Suivant</button>
+                <Button variant="contained" color="secondary"> onClick={previousPage}>Page precedente</button>
+                <Button variant="contained" color="secondary"> onClick={setRedirect}>Redirect</button>
+                <Button variant="contained" color="secondary"> onClick={nextPage}>Page Suivant</button>
             </div>
         </div>
     )
