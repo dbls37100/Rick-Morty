@@ -1,0 +1,16 @@
+.style-card_Solo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.Footer-button_display2 {
+    bottom: 0%;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    height: 10%;
+}

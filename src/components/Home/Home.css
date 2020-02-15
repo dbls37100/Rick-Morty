@@ -1,0 +1,51 @@
+.style-card {
+    background-color: #40302D;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Footer-button_display {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+}
+
+.fa-question-circle, .fa-skull-crossbones, .fa-heartbeat {
+    font-size: 50px;
+}
+
+.form-Disposition {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.display-input_form {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 40px;
+    margin-bottom: 50px;
+    border: black 2px solid;
+}
+
+.display-Filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+
+
+@media screen and (min-width: 900px) {
+    .img-Size {
+        height: 600px;
+        width: 65%;
+        margin: auto;
+    }
+}
