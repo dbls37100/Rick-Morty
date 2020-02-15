@@ -127,9 +127,8 @@ const Home = () => {
                 ))}
             </div>
             <div className="Footer-button_display">
-                <Button variant="contained" color="secondary"> onClick={previousPage}>Page precedente</Button>
-                <Button variant="contained" color="secondary"> onClick={setRedirect}>Redirect</Button>
-                <Button variant="contained" color="secondary"> onClick={nextPage}>Page Suivant</Button>
+                <Button variant="contained" color="secondary" onClick={previousPage}>Page precedente</Button> 
+                <Button variant="contained" color="secondary" onClick={nextPage}>Page Suivant</Button>
             </div>
         </div>
     )
