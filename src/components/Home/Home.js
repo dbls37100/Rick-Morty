@@ -108,7 +108,7 @@ const Home = () => {
         <div>
             <button onClick={listReturn}>Revenir a la liste</button>
             <form className="form-Disposition" onSubmit={handleSubmitName}>
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" value={name} onChange={e => setName(e.target.value)} />
+                <TextField className="color-Textfield" id="outlined-basic" label="Outlined" variant="outlined" value={name} onChange={e => setName(e.target.value)} />
             </form>
             <div className="display-Filter">
                 <i onClick={handleSubmitAlive} className="fas fa-heartbeat"></i>
@@ -122,13 +122,19 @@ const Home = () => {
                     <h2>{data.id}</h2>
                     <h2>{data.name}</h2>
                     <h2 >{data.status}</h2>
-                    <img className="img-Size" src={data.image} alt="rick et compagnie"/>
+                    <div>
+                        <img className="img-Size" src={data.image} alt="rick et compagnie"/>
+                    </div>
                 </div>
                 ))}
             </div>
             <div className="Footer-button_display">
-                <Button variant="contained" color="secondary" onClick={previousPage}>Page precedente</Button> 
-                <Button variant="contained" color="secondary" onClick={nextPage}>Page Suivant</Button>
+                <div className="bouton-left">
+                    <Button variant="contained" color="primary" onClick={previousPage}>{numberPage - 1}</Button> 
+                </div>
+                <div className="bouton-right">
+                <Button variant="contained" color="primary" onClick={nextPage}>{numberPage + 1}</Button>
+                </div>
             </div>
         </div>
     )

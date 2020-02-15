@@ -9,9 +9,20 @@
 
 .Footer-button_display {
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     bottom: 0px;
     width: 100%;
-    background-color: black;
+    margin: auto;
+}
+
+.bouton-left {
+    left: 2px;
+}
+
+.bouton-right {
+    right: 2px;
 }
 
 .fa-question-circle, .fa-skull-crossbones, .fa-heartbeat {
@@ -22,6 +33,12 @@
     width: 100vw;
     display: flex;
     justify-content: center;
+}
+
+.color-Textfield {
+    background-color: #C2A878;
+    border-radius: 5px;
+    margin-bottom: 10%;
 }
 
 .display-input_form {
@@ -38,6 +55,14 @@
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.img-Size {
+    height: 400px;
+    width: 85%;
+    margin: auto;
+    border-radius: 2px;
 }
 
 
@@ -45,7 +70,8 @@
 @media screen and (min-width: 900px) {
     .img-Size {
         height: 600px;
-        width: 65%;
+        width: 45%;
         margin: auto;
+        border-radius: 20px;
     }
 }
