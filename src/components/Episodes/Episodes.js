@@ -4,6 +4,7 @@ import './Episodes.css';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
+
 const Episodes = (props) => {
     // donnée générale
     const [ apiData, setApiData ] = useState([]);
@@ -37,6 +38,7 @@ const Episodes = (props) => {
                 <h2>{apiData.type}</h2>
             </div>
             <div className="Footer-button_display">
+
             <Link to="/">
                 <Button renderAs="button" variant="contained" color="primary">
                     <span>Page précédente</span>

@@ -4,6 +4,8 @@ import './Home.css';
 import useLocalStorage from 'react-use-localstorage';
 import { Link } from "react-router-dom";
 import { TextField, Button } from '@material-ui/core';
+import titleSite from '../titleSite.png';
+import fondChargement from '../fondChargement.gif';
 
 const Home = () => {
     // donnée générale
@@ -15,8 +17,12 @@ const Home = () => {
     // Nom recherchée
     const [ name, setName ] = useState('');
     // locale storage
-    // eslint-disable-next-line
     const [urlApi, setUrlApi] = useLocalStorage('urlApi', statusUrlApi );
+    // chargement en cours
+    const [ loader, setLoader ] = useState(true);
+    // message de chargement
+    const [ loaderMessage, setLoaderMessage ] = useState('');
+
 
     
     const setUrl = (url) => {
@@ -30,7 +36,8 @@ const Home = () => {
 
     const handleSubmitName = (e) => {
         setUrl(`https://rickandmortyapi.com/api/character/?name=${name}&page=${1}`);
-        e.preventDefault();
+        setLoaderMessage('Aucun nom correspondant')
+        
     }
 
     // Cherchez par status (En vie, Mort, Inconnue)
@@ -85,13 +92,28 @@ const Home = () => {
         axios.get(urlApi)
         .then(res => {
             setApiData(res.data.results);
+            setLoader(false)
+            setLoaderMessage('Chargement des données')
+
           })
     },[ statusUrlApi, urlApi]);
 
     return (
         <div>
+            <header>
+                <div className="dispositionTitle">
+                    <div>
+                    <img className="imgTitle" src={titleSite} alt="title" />
+                    </div>
+                </div>
+            <div className={loader ? 'display' : 'displayNone'}>
+                <h1>chargement</h1>
+                <h1>{loaderMessage}</h1>
+                <img className={loader ? 'display' : 'displayNone'} src={fondChargement} alt="chargement" />
+            </div>
+            </header>
             <form className="form-Disposition" onSubmit={handleSubmitName}>
-                <TextField className="color-Textfield" id="outlined-basic" label="Outlined" variant="outlined" value={name} onChange={e => setName(e.target.value)} />
+                <TextField className="color-Textfield" id="outlined-basic" label="Recherche un personnage" variant="outlined" value={name} onChange={e => setName(e.target.value)} />
             </form>
             <div className="display-Filter">
                 <i onClick={handleSubmitAlive} className="fas fa-heartbeat"></i>
