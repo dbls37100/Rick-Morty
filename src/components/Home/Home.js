@@ -110,7 +110,7 @@ const Home = () => {
                     <div>
                         <img className="img-Size" src={data.image} alt="rick et compagnie"/>
                     </div>
-                    <Link value={data.id}  to={`/personnage/${data.id}`}>Voir Plus</Link>
+                    <Link className="color_Link" value={data.id}  to={`/personnage/${data.id}`}><h2>Voir Plus</h2></Link>
                 </div>
                 ))}
             </div>
