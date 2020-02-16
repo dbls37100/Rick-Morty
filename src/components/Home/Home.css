@@ -10,7 +10,7 @@
 .sizeCard {
 background-color: #392F5A;
 border-radius: 10px;
-width: 60%;
+width: 90%;
 justify-content: center;
 }
 
@@ -95,4 +95,7 @@ justify-content: center;
         margin: auto;
         border-radius: 20px;
     }
+    .sizeCard {
+        width: 80%;
+        }
 }
