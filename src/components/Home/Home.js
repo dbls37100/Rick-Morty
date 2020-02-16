@@ -101,12 +101,12 @@ const Home = () => {
             <div className="display_Button-align">
                 <Button variant="contained" color="primary" onClick={listReturn}>Reinitialiser les filtres</Button>
             </div>
-            <div>
+            <div className="structure-card">
+            <div className="sizeCard">
                 {apiData.map((data, key) => (
                 <div  className="style-card" key={key}>
                     <Link value={data.id}  to={`/personnage/${data.id}`}>Voir Plus</Link>
-                    <h2>{data.id}</h2>
-                    <h2>{data.name}</h2>
+                    <h1>{data.name}</h1>
                     <h2 >{data.status}</h2>
                     <div>
                         <img className="img-Size" src={data.image} alt="rick et compagnie"/>
@@ -114,10 +114,13 @@ const Home = () => {
                 </div>
                 ))}
             </div>
+            </div>
             <div className="Footer-button_display">
+                
                 <div className="bouton-left">
                     <Button variant="contained" color="primary" onClick={previousPage}>{numberPage - 1}</Button> 
                 </div>
+
                 <div className="bouton-right">
                 <Button variant="contained" color="primary" onClick={nextPage}>{numberPage + 1}</Button>
                 </div>

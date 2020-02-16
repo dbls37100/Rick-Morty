@@ -1,10 +1,23 @@
 .style-card {
-    background-color: #40302D;
     color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin-top: 100px;
+}
+
+.sizeCard {
+background-color: #392F5A;
+border-radius: 10px;
+width: 60%;
+justify-content: center;
+}
+
+.structure-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .display_Button-align {
@@ -23,6 +36,7 @@
     width: 100%;
     margin: auto;
 }
+
 
 .bouton-left {
     margin-right: 1%;
