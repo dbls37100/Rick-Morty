@@ -105,12 +105,12 @@ const Home = () => {
             <div className="sizeCard">
                 {apiData.map((data, key) => (
                 <div  className="style-card" key={key}>
-                    <Link value={data.id}  to={`/personnage/${data.id}`}>Voir Plus</Link>
                     <h1>{data.name}</h1>
                     <h2 >{data.status}</h2>
                     <div>
                         <img className="img-Size" src={data.image} alt="rick et compagnie"/>
                     </div>
+                    <Link value={data.id}  to={`/personnage/${data.id}`}>Voir Plus</Link>
                 </div>
                 ))}
             </div>
