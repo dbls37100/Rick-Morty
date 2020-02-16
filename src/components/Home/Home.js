@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css';
 import useLocalStorage from 'react-use-localstorage';
-import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { TextField, Button } from '@material-ui/core';
 
@@ -18,9 +17,6 @@ const Home = () => {
     // locale storage
     // eslint-disable-next-line
     const [urlApi, setUrlApi] = useLocalStorage('urlApi', statusUrlApi );
-
-
-    const [ redirectPerso, setRedirectPerso ] = useState(false);
 
     
     const setUrl = (url) => {
@@ -82,18 +78,6 @@ const Home = () => {
         setNumberPage(numberPage + 1);
         setUrl(`https://rickandmortyapi.com/api/character/?page=${numberPage +1}`);
     }
-
-    
-    const setRedirect = () => {
-        setRedirectPerso(true)
-        renderRedirect()
-    }
-    
-    const renderRedirect = () => {
-        if (redirectPerso) {
-          return <Redirect to='/' />
-        }
-      }
 
       // ComponentDidMount/DidUpdate
 
