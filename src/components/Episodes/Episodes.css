@@ -1,7 +1,8 @@
+
 .style-card_Solo {
     margin-bottom: 5%;
     max-width: 100vw;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,5 +12,5 @@
 .Footer-button_display2 {
     margin-bottom: 10px;
     width: 100%;
-    overflow: hidden;
+
 }
