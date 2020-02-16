@@ -25,11 +25,11 @@
 }
 
 .bouton-left {
-    left: 2px;
+    margin-right: 1%;
 }
 
 .bouton-right {
-    right: 2px;
+    margin-left: 1%;
 }
 
 .fa-question-circle, .fa-skull-crossbones, .fa-heartbeat {
