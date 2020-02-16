@@ -101,15 +101,15 @@ const Home = () => {
     return (
         <div>
             <header>
-                <div className="dispositionTitle">
+                <div className={loader ? "displayNone" : "dispositionTitle"}>
                     <div>
                     <img className="imgTitle" src={titleSite} alt="title" />
                     </div>
                 </div>
             <div className={loader ? 'display' : 'displayNone'}>
-                <h1>chargement</h1>
-                <h1>{loaderMessage}</h1>
-                <img className={loader ? 'display' : 'displayNone'} src={fondChargement} alt="chargement" />
+                <h1 className="errordisplay">chargement</h1>
+                <h1 className="errordisplay">{loaderMessage}</h1>
+                <img className={loader ? 'displayImage' : 'displayNone'} src={fondChargement} alt="chargement" />
             </div>
             </header>
             <form className="form-Disposition" onSubmit={handleSubmitName}>
@@ -137,7 +137,7 @@ const Home = () => {
                 ))}
             </div>
             </div>
-            <div className="Footer-button_display">
+            <div className={loader ? "displayNone" : "Footer-button_display"}>
                 
                 <div className="bouton-left">
                     <Button variant="contained" color="primary" onClick={previousPage}>{numberPage - 1}</Button> 

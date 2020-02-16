@@ -21,6 +21,16 @@
     width: 100vw;
 }
 
+.displayImage {
+    height: 80%;
+    width: 100%;
+}
+
+.errordisplay {
+    height: 10%;
+    margin: auto;
+}
+
 .displayNone {
     display: none;
 }
@@ -91,6 +101,10 @@ justify-content: center;
     height: 40px;
     margin-bottom: 50px;
     border: black 2px solid;
+}
+
+.imgTitle {
+    max-width: 100%;
 }
 
 .display-Filter {
