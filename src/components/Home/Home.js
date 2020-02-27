@@ -89,7 +89,10 @@ const Home = () => {
       // ComponentDidMount/DidUpdate
 
     useEffect(() => {
-        axios.get(urlApi)
+        const config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        };
+        axios.get(urlApi, config)
         .then(res => {
             setApiData(res.data.results);
             setLoader(false)
