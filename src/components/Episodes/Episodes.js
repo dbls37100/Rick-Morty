@@ -21,7 +21,10 @@ const Episodes = (props) => {
 
 
     useEffect(() => {
-        axios.get(`https://rickandmortyapi.com/api/character/${id}`)
+        const config = {
+            headers: {'Access-Control-Allow-Origin': '*'}
+        };
+        axios.get(`https://rickandmortyapi.com/api/character/${id}`, config)
         .then(res => {
             setApiData(res.data);
           })
